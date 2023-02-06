@@ -16,6 +16,12 @@ img[alt='screenshot'] {
   margin: 20px;
 }
 
+img[alt='laundry'] {
+  width: 200px;
+  margin: 20px;
+}
+
+
 hr {
   border-bottom-width: 1px;
   --tw-border-opacity: 1;

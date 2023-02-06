@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" class="min-h-screen">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditionals</title>
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/style.css"/>
+  </head>
+  <body class="bg-gray-100 tracking-wider min-h-screen">
+    <nav id="header" class="sticky w-full z-10 top-0 bg-white border-b border-gray-400">
+  <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-4">
+    <div class="pl-4 flex items-center">
+      <a href="/"><img class="w-64 pr-3" src="/assets/images/logo.png" alt="Logo"></a>
+      
+    </div>
+    <div class="block lg:hidden pr-4">
+      <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-purple-500 appearance-none focus:outline-none">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+        </svg>
+      </button>
+    </div>
+    
+  </div>
+</nav>
+
+    <div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-16 mt-16">
+
+      <div class="w-full lg:w-1/5 lg:px-6 text-xl text-gray-800 leading-normal">
+
+  <div class="sticky top-10 w-full inset-0 lg:block mt-0 border border-gray-400 lg:border-transparent bg-white shadow lg:shadow-none lg:bg-transparent z-20" style="top:5em;">
+    <h3 class="font-bold">Steps</h3>
+    <ul class="list-reset">
+      
+        <li class="py-2 md:my-0 hover:bg-purple-100 lg:hover:bg-transparent">
+          
+            <a href="/00-beginning/" 
+            class="block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent lg:hover:border-gray-400">
+              <span class="pb-1 md:pb-0 text-sm">The Beginning</span>
+            </a>
+          
+        </li>
+      
+        <li class="py-2 md:my-0 hover:bg-purple-100 lg:hover:bg-transparent">
+          
+            <a href="/01-nouns/" 
+            class="block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent lg:hover:border-gray-400">
+              <span class="pb-1 md:pb-0 text-sm">Nouns</span>
+            </a>
+          
+        </li>
+      
+        <li class="py-2 md:my-0 hover:bg-purple-100 lg:hover:bg-transparent">
+          
+            <a href="/02-verbs/" 
+            class="block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent lg:hover:border-gray-400">
+              <span class="pb-1 md:pb-0 text-sm">Verbs</span>
+            </a>
+          
+        </li>
+      
+        <li class="py-2 md:my-0 hover:bg-purple-100 lg:hover:bg-transparent">
+          
+            <a href="/03-conditionals/" 
+            class="block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent lg:border-purple-500 lg:hover:border-purple-500">
+              <span class="pb-1 md:pb-0 text-sm text-gray-900 font-bold">Conditionals</span>
+            </a>
+          
+        </li>
+      
+        <li class="py-2 md:my-0 hover:bg-purple-100 lg:hover:bg-transparent">
+          
+            <a href="/04-iterators/" 
+            class="block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent lg:hover:border-gray-400">
+              <span class="pb-1 md:pb-0 text-sm">Iterators</span>
+            </a>
+          
+        </li>
+      
+        <li class="py-2 md:my-0 hover:bg-purple-100 lg:hover:bg-transparent">
+          
+            <a href="/05-grand-finale/" 
+            class="block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent lg:hover:border-gray-400">
+              <span class="pb-1 md:pb-0 text-sm">The Grand Finale</span>
+            </a>
+          
+        </li>
+      
+    </ul>
+    <div class="my-6"></div>
+
+    <h3 class="font-bold">Bonus</h3>
+
+    <ul class="list-reset">
+      
+        <li class="py-2 md:my-0 hover:bg-purple-100 lg:hover:bg-transparent">
+          
+            <a href="/01-thought-exercise/" 
+            class="block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent lg:hover:border-gray-400">
+              <span class="pb-1 md:pb-0 text-sm">Simple Thought Exercise</span>
+            </a>
+          
+        </li>
+      
+        <li class="py-2 md:my-0 hover:bg-purple-100 lg:hover:bg-transparent">
+          
+            <a href="/02-immutable-operations/" 
+            class="block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent lg:hover:border-gray-400">
+              <span class="pb-1 md:pb-0 text-sm">Immutable Operations</span>
+            </a>
+          
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+      <div class="w-full prose max-w-none lg:w-4/5 p-8 mt-6 lg:mt-0 text-gray-900 leading-normal bg-white border border-gray-400 border-rounded">
+          
+<article><h1>Conditionals</h1>
+<hr>
+<pre class="language-javascript"><code class="language-javascript"><span class="token boolean">true</span> <span class="token operator">===</span> <span class="token boolean">true</span><br>batman<span class="token punctuation">.</span>secretIdentity <span class="token operator">===</span> ‘Bruce Wayne’<br>client<span class="token punctuation">.</span>id <span class="token operator">!==</span> payload<span class="token punctuation">.</span>id</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token function">saveClient</span><span class="token punctuation">(</span><span class="token parameter">client</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>client<span class="token punctuation">.</span>id<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">createClient</span><span class="token punctuation">(</span>client<span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span><br>    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">updateClient</span><span class="token punctuation">(</span>client<span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br><span class="token punctuation">}</span></code></pre>
+<pre class="language-javascript"><code class="language-javascript">state<span class="token punctuation">.</span>clients<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">client</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>  <span class="token comment">// SOME_CONDITION ? TRUE_VALUE : FALSE_VALUE</span><br>  <span class="token keyword">return</span> client<span class="token punctuation">.</span>id <span class="token operator">===</span> payload<span class="token punctuation">.</span>id <span class="token operator">?</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> client<span class="token punctuation">,</span> payload<span class="token punctuation">)</span> <span class="token operator">:</span> client<span class="token punctuation">;</span><br><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">calculate</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> operation</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>  <span class="token keyword">switch</span> <span class="token punctuation">(</span>operation<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token keyword">case</span> <span class="token string">'add'</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span><br>    <span class="token keyword">case</span> <span class="token string">'subtract'</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> a <span class="token operator">-</span> b<span class="token punctuation">;</span><br>    <span class="token keyword">case</span> <span class="token string">'multiply'</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> a <span class="token operator">*</span> b<span class="token punctuation">;</span><br>    <span class="token keyword">case</span> <span class="token string">'divide'</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> a <span class="token operator">/</span> b<span class="token punctuation">;</span><br>    <span class="token keyword">default</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> <span class="token number">42</span><span class="token punctuation">;</span> <span class="token comment">// DUH!</span><br>  <span class="token punctuation">}</span><br><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<h2>In Practice</h2>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">reducer</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">state <span class="token operator">=</span> initialState<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>  <span class="token keyword">switch</span> <span class="token punctuation">(</span>action<span class="token punctuation">.</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token keyword">case</span> <span class="token string">'load'</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> <span class="token function">loadClients</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token punctuation">.</span>payload<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">case</span> <span class="token string">'select'</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> <span class="token function">selectClient</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token punctuation">.</span>payload<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">case</span> <span class="token string">'create'</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> <span class="token function">createClient</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token punctuation">.</span>payload<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">case</span> <span class="token string">'update'</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> <span class="token function">updateClient</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token punctuation">.</span>payload<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">case</span> <span class="token string">'delete'</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> <span class="token function">deleteClient</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token punctuation">.</span>payload<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">case</span> <span class="token string">'clear'</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> <span class="token function">clearClient</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token punctuation">.</span>payload<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">default</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> state<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">interface</span> <span class="token class-name">Action</span> <span class="token punctuation">{</span><br>  <span class="token literal-property property">type</span><span class="token operator">:</span> string<span class="token punctuation">;</span><br>  payload<span class="token operator">?</span><span class="token operator">:</span> any<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token constant">CLIENT_LOAD</span> <span class="token operator">=</span> <span class="token string">'[Client] Load'</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> <span class="token constant">CLIENT_CREATE</span> <span class="token operator">=</span> <span class="token string">'[Client] Create'</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> <span class="token constant">CLIENT_UPDATE</span> <span class="token operator">=</span> <span class="token string">'[Client] Update'</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> <span class="token constant">CLIENT_DELETE</span> <span class="token operator">=</span> <span class="token string">'[Client] Delete'</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> <span class="token constant">CLIENT_SELECT</span> <span class="token operator">=</span> <span class="token string">'[Client] Select'</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> <span class="token constant">CLIENT_CLEAR</span> <span class="token operator">=</span> <span class="token string">'[Client] Clear'</span><span class="token punctuation">;</span></code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">reducer</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">state <span class="token operator">=</span> initialState<span class="token punctuation">,</span> <span class="token literal-property property">action</span><span class="token operator">:</span> Action</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>  <span class="token keyword">switch</span> <span class="token punctuation">(</span>action<span class="token punctuation">.</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token keyword">case</span> <span class="token constant">CLIENT_LOAD</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> <span class="token function">loadClients</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token punctuation">.</span>payload<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">case</span> <span class="token constant">CLIENT_SELECT</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> <span class="token function">selectClient</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token punctuation">.</span>payload<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">case</span> <span class="token constant">CLIENT_CREATE</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> <span class="token function">createClient</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token punctuation">.</span>payload<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">case</span> <span class="token constant">CLIENT_UPDATE</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> <span class="token function">updateClient</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token punctuation">.</span>payload<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">case</span> <span class="token constant">CLIENT_DELETE</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> <span class="token function">deleteClient</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token punctuation">.</span>payload<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">case</span> <span class="token constant">CLIENT_CLEAR</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> <span class="token function">clearClient</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token punctuation">.</span>payload<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">default</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> state<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<h2>Challenges</h2>
+<ol>
+<li>Create a <strong>reducer</strong> function that accepts <strong>state</strong> and an <strong>action</strong> parameter</li>
+<li>Add a <strong>switch</strong> statement that evaluates the <strong>action.type</strong></li>
+<li>Add a condition for <strong>load</strong>, <strong>read</strong>, <strong>create</strong>, <strong>update</strong>, and <strong>delete</strong></li>
+<li>Create an appropriate method for each condition that accepts <strong>state</strong> an <strong>action.payload</strong> parameter</li>
+</ol>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// HINT: The method should just return state for now </span><br><span class="token function">loadClients</span><span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> action<span class="token punctuation">.</span>payload</span><span class="token punctuation">)</span> <span class="token operator">=></span> state<span class="token punctuation">;</span></code></pre>
+<ol start="5">
+<li><strong>BONUS!</strong> Create an <strong>Action</strong> interface and <strong>action.type constants</strong></li>
+</ol>
+<h2>Solutions</h2>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">interface</span> <span class="token class-name">Action</span> <span class="token punctuation">{</span><br>  <span class="token literal-property property">type</span><span class="token operator">:</span> string<span class="token punctuation">;</span><br>  payload<span class="token operator">?</span><span class="token operator">:</span> any<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token keyword">const</span> <span class="token constant">PROJECT_LOAD</span>    <span class="token operator">=</span> <span class="token string">'[Project] Load'</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> <span class="token constant">PROJECT_CREATE</span>  <span class="token operator">=</span> <span class="token string">'[Project] Create'</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> <span class="token constant">PROJECT_UPDATE</span>  <span class="token operator">=</span> <span class="token string">'[Project] Update'</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> <span class="token constant">PROJECT_DELETE</span>  <span class="token operator">=</span> <span class="token string">'[Project] Delete'</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> <span class="token constant">PROJECT_SELECT</span>  <span class="token operator">=</span> <span class="token string">'[Project] Select'</span><span class="token punctuation">;</span><br><br><span class="token keyword">const</span> loadProjects <span class="token operator">=</span> <span class="token punctuation">(</span>state<span class="token punctuation">,</span> payload<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token parameter">ProjectsState</span> <span class="token operator">=></span> state<span class="token punctuation">;</span><br><br><span class="token keyword">const</span> selectProject <span class="token operator">=</span> <span class="token punctuation">(</span>state<span class="token punctuation">,</span> payload<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token parameter">ProjectsState</span>  <span class="token operator">=></span> state<span class="token punctuation">;</span><br><br><span class="token keyword">const</span> createProject <span class="token operator">=</span> <span class="token punctuation">(</span>state<span class="token punctuation">,</span> payload<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token parameter">ProjectsState</span>  <span class="token operator">=></span> state<span class="token punctuation">;</span><br><br><span class="token keyword">const</span> updateProject <span class="token operator">=</span> <span class="token punctuation">(</span>state<span class="token punctuation">,</span> payload<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token parameter">ProjectsState</span>  <span class="token operator">=></span> state<span class="token punctuation">;</span><br><br><span class="token keyword">const</span> deleteProject <span class="token operator">=</span> <span class="token punctuation">(</span>state<span class="token punctuation">,</span> payload<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token parameter">ProjectsState</span>  <span class="token operator">=></span> state<span class="token punctuation">;</span><br><br><span class="token keyword">const</span> reducer <span class="token operator">=</span> <span class="token punctuation">(</span>state <span class="token operator">=</span> initialProjectsState<span class="token punctuation">,</span> <span class="token literal-property property">action</span><span class="token operator">:</span> Action<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token parameter">ProjectsState</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>  <span class="token keyword">switch</span> <span class="token punctuation">(</span>action<span class="token punctuation">.</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token keyword">case</span> <span class="token constant">PROJECT_LOAD</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> <span class="token function">loadProjects</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token punctuation">.</span>payload<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">case</span> <span class="token constant">PROJECT_SELECT</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> <span class="token function">selectProject</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token punctuation">.</span>payload<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">case</span> <span class="token constant">PROJECT_CREATE</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> <span class="token function">createProject</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token punctuation">.</span>payload<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">case</span> <span class="token constant">PROJECT_UPDATE</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> <span class="token function">updateProject</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token punctuation">.</span>payload<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">case</span> <span class="token constant">PROJECT_DELETE</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> <span class="token function">deleteProject</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token punctuation">.</span>payload<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">default</span><span class="token operator">:</span><br>      <span class="token keyword">return</span> state<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br><span class="token punctuation">}</span></code></pre>
+</article>
+
+      </div>
+
+      <div class="w-full lg:w-4/5 lg:ml-auto text-base md:text-sm text-gray-500 px-4 py-6">
+  <span class="text-base text-purple-500 font-bold">&lt;</span>
+  <a href="/" class="text-base md:text-sm text-purple-500 font-bold no-underline hover:underline">Back Home</a>
+</div>
+
+    </div>
+
+    <footer class="sticky top-[100vh] bg-white border-t border-gray-400 shadow">
+  <div class="container mx-auto flex py-8">
+    <div class="w-full mx-auto flex flex-wrap">
+      <div class="flex w-full lg:w-1/2 ">
+        <div class="px-8">
+          <h3 class="font-bold text-gray-900">The Reason</h3>
+          <p class="py-4 text-gray-600 text-sm">
+            Programming has changed our lives in ways we could have never imagined. This site is a gift to help you on your programming journey. <strong>We hope you love this adventure!</strong>
+          </p>
+        </div>
+      </div>
+      <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
+        <div class="px-8">
+          <h3 class="font-bold text-gray-900">Made with Love</h3>
+          <a class="inline-block py-2 text-gray-900 font-bold no-underline" target="_blank" href="https://presolved.io">
+            <img class="h-12 bg-blend-multiply" src="/assets/images/presolved-logo-filled.png" alt="Presolved">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </html>

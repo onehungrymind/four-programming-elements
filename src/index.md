@@ -1,10 +1,10 @@
 ---
-title: 11ty Starter
+title: The Four Programming Elements
 layout: base.njk
 templateEngineOverride: njk,md
 ---
 
-# Eleventy Starter
+# The Four Programming Elements
 ---
 
 ```javascript

@@ -1,8 +1,8 @@
 ---
-title: Initializing Project
+title: The Beginning
 layout: post.njk
 templateEngineOverride: njk,md
-date: 2023-01-02
+date: 2023-01-01
 ---
 
 # {{ title }}

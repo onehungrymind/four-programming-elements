@@ -1,13 +1,13 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-	content: [
-		'./src/**/*.njk',
-		'./src/**/*.md',
-		'./src/**/*.js',
-		'./.*.js',
-		'./dist/**/*.html'
-	],
+  content: [
+    './src/**/*.njk',
+    './src/**/*.md',
+    './src/**/*.js',
+    './.*.js',
+    './dist/**/*.html',
+  ],
   darkMode: 'class',
   theme: {
     fontSize: {
@@ -35,9 +35,14 @@ module.exports = {
       },
     },
   },
+  variants: {
+    extend: {
+      visibility: ['group-hover'],
+    },
+  },
   plugins: [
     require('@tailwindcss/typography'),
     require('tailwindcss/colors'),
-    require('tailwindcss/plugin')
+    require('tailwindcss/plugin'),
   ],
-}
+};
