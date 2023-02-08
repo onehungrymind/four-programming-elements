@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"npm run dev:11ty\" \"npm run dev:css\"",
-    "build":  "concurrently \"npm run build:11ty\" \"npm run build:css\"",
+    "build":  "npm run build:11ty && npm run build:css",
     "dev:11ty": "eleventy --serve",
     "dev:css": "tailwindcss -i ./src/css/tailwind.css -o ./dist/css/tailwind.css --watch",
     "build:11ty": "eleventy",
-    "build:css": "tailwindcss -i src/css/tailwind.css -o dist/css/tailwind.css --minify"
+    "build:css": "tailwindcss -i ./src/css/tailwind.css -o ./dist/css/tailwind.css --minify"
   },
   "keywords": [],
   "author": "",

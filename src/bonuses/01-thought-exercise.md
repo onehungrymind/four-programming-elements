@@ -35,7 +35,7 @@ We will fold the clothes and sort them into separate baskets
   <img src="/assets/laundry/clean-laundry-basket.png" class="w-24 h-24">
 </div>
 
-Do we know the different between these items of clothing?
+Do we know the difference between these items of clothing?
 
 <div class="flex">
   <img src="/assets/laundry/pants.png" class="w-24 h-24">
