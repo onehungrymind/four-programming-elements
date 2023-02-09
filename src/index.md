@@ -48,7 +48,7 @@ After programming for many years, I realized that I was doing the same basic thi
 We will introduce and elaborate on these four elements in the following sections, but I wanted to give you a preview of where we are going. 
 ## The Exercises
 
-The format for this course will consist of a series of small exercises that we will do entirely in [StackBlitz](https://stackblitz.com/). [StackBlitz](https://stackblitz.com/) is excellent because it allows us to start immediately without anything getting in the way. To start, navigate to [StackBlitz](https://stackblitz.com/) and click on the [TypeScript Blank Project](https://stackblitz.com/#:~:text=TypeScript,Blank%20project) button. 
+The format for this course will consist of a series of small exercises that we will do entirely in [StackBlitz](https://stackblitz.com/). [StackBlitz](https://stackblitz.com/) is an online code editor which makes it an excellent choice because it allows us to start immediately without anything getting in the way. To start, navigate to [StackBlitz](https://stackblitz.com/) and click on the [TypeScript Blank Project](https://stackblitz.com/#:~:text=TypeScript,Blank%20project) button. 
 
 ![screenshot](/assets/screenshots/stackblitz.png)
 
