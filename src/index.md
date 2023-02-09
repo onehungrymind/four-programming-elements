@@ -4,7 +4,20 @@ layout: base.njk
 templateEngineOverride: njk,md
 ---
 
-# Complex vs Complicated
+# The Four Elements of Programming
+
+Welcome to The Four Elements of Programming micro-course! Learning to program was one of the best things to happen to me. I am extremely grateful that I have managed to make a good living in the industry but that is not even a top five reason why I love being a programmer. 
+
+First and foremost, it has given me the tools to be a better thinker. Without reservation, the mental discipline I have acquired has benefitted me in every other area of my life. It is like growing up playing shortstop in baseball and then finding out that this skill set makes you an unstoppable quarterback in football. 
+
+In a close second, I have made a lot of friends through programming. Creative people are just more interesting! Programmers are no exception to the rule. 
+
+
+And thirdly, I have had the opportunity to build stuff that has made a huge difference in the lives of the people using those applications. We are seeing software solve some of the biggest problems in the world today in really powerful ways. 
+
+I created this micro-course as a personal invitation into the world of programming. If you are even remotely curious about programming, it would be a huge honor for you to give me the chance to make the case for you to stick around. This is by no means an exhaustive tour of programming but through a series of basic exercises, we are going to back into something really important. I am not going to spoil the surprise!
+
+## Complex vs Complicated
 ---
 
 Do you know the difference between **complex** and **complicated**? This distinction profoundly changes the way that we see the world and more importantly, how we approach new and unknown experiences. **Complexity** is hard to control and predict. **Complicated** things are not simple but ultimately knowable. 

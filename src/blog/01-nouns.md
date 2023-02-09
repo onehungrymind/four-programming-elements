@@ -171,11 +171,11 @@ const initialState: TeamState = {
 };
 ```
 
-## Challenges Part One
+## Challenges
 1. Pick something interesting to you such as a player, recipe, album, instrument, etc. 
 2. Create an **object** to represent the object of your choice. 
 3. Add three or four **properties** that are relevant to your **object** and assign them **values**.
 4. Create an interface to represent your **object**.
 5. Create an **array** with a few instances of your objects.
-6. Create an **interface** to represent the application state of your object i.e. **TeamsState** or **RecipesState**
+6. Create an **interface** to represent the application state of your object i.e. **AlbumsState** or **RecipesState**
 7. Create an **initialState** object that implements your state interface
