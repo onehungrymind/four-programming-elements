@@ -15,64 +15,68 @@ interface Action {
   payload?: any;
 }
 
-const CLIENT_LOAD = '[Client] Load';
-const CLIENT_CREATE = '[Client] Create';
-const CLIENT_UPDATE = '[Client] Update';
-const CLIENT_DELETE = '[Client] Delete';
-const CLIENT_SELECT = '[Client] Select';
-const CLIENT_CLEAR = '[Client] Clear';
+interface TeamState {
+  players: Player[];
+  currentPlayer: Player;
+}
 
-const loadClients = (state, payload): ClientsState => {
+const PLAYERS_LOAD  = '[Players] Load Players';
+const PLAYER_CREATE = '[Players] Create Player';
+const PLAYER_UPDATE = '[Players] Update Player';
+const PLAYER_DELETE = '[Players] Delete Player';
+const PLAYER_SELECT = '[Players] Select Player';
+
+const loadPlayers = (state, payload): PlayersState => {
   return {
-    clients: payload,
-    currentClient: null,
+    players: payload,
+    currentPlayer: null,
   };
 };
 
-const selectClient = (state, payload): ClientsState => {
+const selectPlayer = (state, payload): PlayersState => {
   return {
-    clients: state.clients,
-    currentClient: payload,
+    players: state.players,
+    currentPlayer: payload,
   };
 };
 
-const createClient = (state, payload): ClientsState => {
+const createPlayer = (state, payload): PlayersState => {
   return {
-    clients: [...state.clients, payload],
-    currentClient: state.currentClient,
+    players: [...state.players, payload],
+    currentPlayer: state.currentPlayer,
   };
 };
 
-const updateClient = (state, payload): ClientsState => {
+const updatePlayer = (state, payload): PlayersState => {
   return {
-    clients: state.clients.map((client) => {
-      return client.id === payload.id
-        ? Object.assign({}, client, payload)
-        : client;
+    players: state.players.map((player) => {
+      return player.id === payload.id
+        ? Object.assign({}, player, payload)
+        : player;
     }),
-    currentClient: state.currentClient,
+    currentPlayer: state.currentPlayer,
   };
 };
 
-const deleteClient = (state, payload): ClientsState => {
+const deletePlayer = (state, payload): PlayersState => {
   return {
-    clients: state.clients.filter((client) => client.id !== payload.id),
-    currentClient: state.currentClient,
+    players: state.players.filter((player) => player.id !== payload.id),
+    currentPlayer: state.currentPlayer,
   };
 };
 
-const reducer = (state = initialClientsState, action: Action): ClientsState => {
+const reducer = (state = initialPlayersState, action: Action): PlayersState => {
   switch (action.type) {
-    case CLIENT_LOAD:
-      return loadClients(state, action.payload);
-    case CLIENT_SELECT:
-      return selectClient(state, action.payload);
-    case CLIENT_CREATE:
-      return createClient(state, action.payload);
-    case CLIENT_UPDATE:
-      return updateClient(state, action.payload);
-    case CLIENT_DELETE:
-      return deleteClient(state, action.payload);
+    case PLAYERS_LOAD:
+      return loadPlayers(state, action.payload);
+    case PLAYER_SELECT:
+      return selectPlayer(state, action.payload);
+    case PLAYER_CREATE:
+      return createPlayer(state, action.payload);
+    case PLAYER_UPDATE:
+      return updatePlayer(state, action.payload);
+    case PLAYER_DELETE:
+      return deletePlayer(state, action.payload);
     default:
       return state;
   }
@@ -82,14 +86,14 @@ const reducer = (state = initialClientsState, action: Action): ClientsState => {
 ```javascript
 class Store {
   reducer;
-  state: ClientsState;
+  state: PlayersState;
 
-  constructor(state: ClientsState, reducer) {
+  constructor(state: PlayersState, reducer) {
     this.reducer = reducer;
     this.state = state;
   }
 
-  getState(): ClientsState {
+  getState(): PlayersState {
     return this.state;
   }
 
@@ -104,15 +108,27 @@ class Store {
 ```
 
 ```javascript
-const spiderMan: Client = {
-  id: '1111111',
-  firstName: 'Miles',
-  lastName: 'Morales',
-  company: 'High School',
+const unknown: Player = {
+  id: null,
+  firstName: '',
+  lastName: '',
+  position: '',
 };
 
-const store = new Store(initialClientsState, reducer);
-const aClient = store.select('currentClient');
-store.dispatch({ type: CLIENT_SELECT, payload: spiderMan });
-const bClient = store.select('currentClient');
+const initialPlayersState: TeamState = {
+  players,
+  currentPlayer: unknown,
+};
+
+const mecole: Player = {
+  id: '12345',
+  firstName: 'Mecole',
+  lastName: 'Hardman',
+  position: 'Wide Receiver',
+};
+
+const store = new Store(initialPlayersState, reducer);
+let ballCarrier  = store.select('currentPlayer');
+store.dispatch({ type: PLAYER_SELECT, payload: mecole });
+ballCarrier = store.select('currentPlayer');
 ```

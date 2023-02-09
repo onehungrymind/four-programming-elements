@@ -9,18 +9,26 @@ date: 2023-01-01
 
 ---
 
-Before we start writing code, we need to establish the foundation. 
+Before we start writing code, we need to establish a solid foundation. As impressive as modern computers are, they are still just a bunch of *really* tiny switches turning on and off. Even the most advanced programs are *just* a bunch of ones and zeroes working together to produce a meaningful outcome. When we understand the first principles that control how a system operates, we can start to deconstruct the system and put it back together in new and novel ways. 
 
+## The Big Reveal
 
-## The Four Elements
+The four things that I realized that I was doing over and over when I programmed are as follows:
 
-- Nouns
-- Verbs
+- Describing things
+- Performing actions
+- Making decisions
+- Repeating via iteration
+
+Here is a slightly modified and more programming-specific variation:
+
+- Data structures or Nouns
+- Functions or Verbs
 - Conditionals
-- Iterators
+- Iterators or Loops
 
-
-## Describing Things
+And this is it! It took me 20 years to realize that I was just doing the things that I had *"learned"* within the first couple of weeks of programming.  
+## Nouns as Data Structures
 
 As small children, we understand that we live in a world with objects. We understand that these objects have characteristics that make them unique. Each characteristic or attribute can store a value that describes the object.
 
@@ -63,7 +71,7 @@ const infinityStones = [
 ]
 ```
 
-## Performing Actions
+## Functions as Verbs
 
 We also understand that objects can perform actions. 
 
@@ -115,9 +123,9 @@ me.fold(shirt);
 
 We can think of methods as verbs. Like methods, we can capture very sophisticated actions as a single verb. How many things are happening when we fly a plane? 
 
-## Making Decisions
+## Conditional Decision Making
 
-Eventually, we have to make a decision based on some conditions. 
+Eventually, we have to make a decision based on a condition or conditions. 
 
 "If you ate your dinner, you can have dessert. Else, you need to go to finish your plate."
 
@@ -141,7 +149,7 @@ if (child.isInPajamas) {
 
 We choose one course of action over another based on conditions. Conditionals are the basis of decision-making in programming. 
 
-## Repeating via Iteration
+## Repeating via Iterators
 
 We can repeat a process several times or until a condition is met.
 

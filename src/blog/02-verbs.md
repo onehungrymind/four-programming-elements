@@ -137,25 +137,3 @@ class Store {
 6. Instantiate the **ProjectStore** class with the **initialState** object
 7. Call **select** on the class to get the **projects** collection
 
-## Solution
-
-```javascript
-class ProjectsStore {
-  state: ProjectsState;
-
-  constructor(state) {
-    this.state = state; 
-  }
-
-  getState() {
-    return this.state;
-  }
-
-  select(key) {
-    return this.state[key];
-  }
-}
-
-const store = new Store(initialState);
-const project = store.select('projects');
-```

@@ -4,14 +4,18 @@ layout: base.njk
 templateEngineOverride: njk,md
 ---
 
-# The Four Programming Elements
+# Complex vs Complicated
 ---
+
+Do you know the difference between **complex** and **complicated**? This distinction profoundly changes the way that we see the world and more importantly, how we approach new and unknown experiences. **Complexity** is hard to control and predict. **Complicated** things are not simple but ultimately knowable. 
 
 What crosses your mind when you think of the word *"programming?"*
 
-The most common response is a variation of *"programming is hard!"*, and only very smart people can do it. This is an understandable outcome, and we are not surprised how many people arrive at this conclusion. This micro-course aims to challenge those preconceptions by embarking on a gentle and fun journey together. 
+The most common response is a variation of *"programming is hard!"*, and only very smart people can do it. This is an understandable outcome, and we are not surprised how many people arrive at this conclusion. Without realizing it, we can classify programming as **complex** which comes with a steep mental and emotional tax. How committed can someone be to a journey that deep down they believe they will never arrive at their destination? 
 
-Programming is not hard because that is just the nature of programming. Programming is hard because reality is hard. Programming, like music and art, depends on our ability to observe what is happening around us and process it. Music is more about hearing than it is about playing. Art is more about seeing than drawing or painting. Likewise, programming revolves around our ability to think and not so much our ability to code. 
+The goal of this micro-course is to gently guide you on a journey to show you that programming is not **complex** but can be **complicated** and we can solve **complicated** with the right mental tools. 
+
+Programming is not *"hard"* because that is just the nature of programming. Programming is *"hard"* because reality is *"hard"*. Programming, like music and art, depends on our ability to observe what is happening around us and process it. Music is more about hearing than it is about playing. Art is more about seeing than drawing or painting. Likewise, programming revolves around our ability to think and not so much our ability to code. 
 
 We do not become better programmers by learning new and novel ways to create more code. Likewise, learning the latest trendy framework will not necessarily make you a better programmer if it does not change how you think about the world. 
 
@@ -19,9 +23,12 @@ Welcome! We will work through a series of exercises that reduces programming to 
 
 In the spirit of Karate Kid, it will seem like all we are doing is painting fences and waxing cars at first, but inevitably, we will realize that we have been learning a much more valuable set of skills all along. 
 
+
+Programming is **complicated** but ultimately knowable. 
+
 ## The Premise
 
-After programming for many years, I realized that I was doing the same basic things over and over again. Specifically, I was only ever doing four basic things. This revelation was stunning to me! But, equally surprising is that I realized that I had understood these concepts since I was a small child. This insight was a major inflection point in my personal worldview. 
+After programming for many years, I realized that I was doing the same basic things over and over again. Specifically, I was only ever doing **four basic things**. This revelation was stunning to me! But, equally surprising is that I realized that I had understood these concepts since I was a small child. This insight was a major inflection point in my personal worldview. 
 
 **We do not need to acquire new information as much as we need to have a deeper understanding of what we already know.**
 

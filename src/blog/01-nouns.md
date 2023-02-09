@@ -9,165 +9,173 @@ date: 2023-01-02
 
 ---
 
+## Values
+
+We are defining a new variable that creates a space in computer memory. The space is defined but it has not been initialized with a value.
+
+```javascript
+const user;
+```
+
+We are now defining the variable and assigning a value to it.
+
+```javascript
+const user = 'John Doe';
+```
+
+When we log the **user** variable to the console, we are telling the JavaScript runtime to print whatever value is stored at the memory pointer occupied by the **user** variable.
+
+```javascript
+console.log(user); // output: John Doe
+```
+
+We can even update the value stored in the **user** memory space.
+
+```javascript
+let user = 'John Doe';
+console.log(user); // output: John Doe
+user = 'Mark James';
+console.log(user); // output: Mark James
+```
+
+Notice that we used **let** instead of **const** in this case. This is not the right place to get into the underpinnings of how JavaScript works but I recommend that you take a few minutes to read the [const documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/) (MDN). For the record, I use the MDN constantly and it is one of my favorite reference resources.
+
+It is important to know how to set a single variable but just like in the real world, most things are not simple values.
+
+```javascript
+const user = {
+  firstName: 'John'
+  lastName: 'Doe'
+}
+```
+
+This is where objects come in.
+
 ## Objects
 
 ```javascript
-const client = {
+const qb = {
   id: '123',
-  firstName: 'John',
-  lastName: 'Doe',
-  company: 'Acme Inc.',
+  firstName: 'Patrick',
+  lastName: 'Mahomes',
+  position: 'Quarterback',
 };
 ```
 
 ```javascript
-const newClient = {
+const emptyPlayerSlot = {
   id: null,
   firstName: '',
   lastName: '',
-  company: '',
+  position: '',
 };
 ```
 
 ## A Collection of Objects
 
 ```javascript
-const clients = [
-  {
-    id: '1',
-    firstName: 'John',
-    lastName: 'Doe',
-    company: 'Acme, Inc',
-  },
-  {
-    id: '2',
-    firstName: 'Jane',
-    lastName: 'Smith',
-    company: 'Super, Inc',
-  },
+const quarterBack = {
+  id: '1',
+  firstName: 'Patrick',
+  lastName: 'Mahomes',
+  position: 'Quarterback',
+};
+
+const tightEnd = {
+  id: '2',
+  firstName: 'Travis',
+  lastName: 'Kelce',
+  position: 'Tight End',
+};
+
+const players = [
+  quarterBack,
+  tightEnd,
 ];
 ```
 
 ## Interfaces
 
 ```javascript
-interface Client {
-  id?: string;
+interface Player {
+  id: string;
   firstName: string;
   lastName: string;
-  company: string;
+  position: string;
 }
 ```
 
 ```javascript
-const clients: Client[] = [
-  {
-    id: '1',
-    firstName: 'John',
-    lastName: 'Doe',
-    company: 'Acme, Inc',
-  },
-  {
-    id: '2',
-    firstName: 'Jane',
-    lastName: 'Smith',
-    company: 'Super, Inc',
-  },
+const quarterBack: Player = {
+  id: '1',
+  firstName: 'Patrick',
+  lastName: 'Mahomes',
+  position: 'Quarterback',
+};
+
+const tightEnd: Player = {
+  id: '2',
+  firstName: 'Travis',
+  lastName: 'Kelce',
+  position: 'Tight End',
+};
+
+const players: Player[] = [
+  quarterBack,
+  tightEnd,
 ];
 ```
 
 ## Classes
 
 ```javascript
-class VipClient implements Client {
+class Rookie implements Player {
   firstName;
   lastName;
-  company;
-  constructor(firstName, lastName, company) {
+  position;
+  constructor(firstName, lastName, position) {
     this.firstName = firstName;
     this.lastName = lastName;
-    this.company = company;
+    this.position = position;
   }
 }
 ```
 
 ```javascript
-const ironMan = new VipClient('Tony', 'Stark', 'Stark Industries');
-console.log(ironMan.firstName); // Tony
-console.log(ironMan.lastName); // Stark
-console.log(ironMan.company); // Stark Industries
+const draftPick = new Rookie('Isaac', 'Pacheco', 'Running Back');
+console.log(draftPick.firstName); // Isaac
+console.log(draftPick.lastName); // Pacheco
+console.log(draftPick.company); // Running Back
 ```
 
 ## In Practice
 
 ```javascript
-interface ClientState {
-  clients: Client[];
-  currentClient: Client;
+interface TeamState {
+  players: Player[];
+  currentPlayer: Player;
 }
 ```
 
 ```javascript
-const newClient: Client = {
+const unknown: Player = {
   id: null,
   firstName: '',
   lastName: '',
-  company: '',
+  position: '',
 };
-const initialState: ClientState = {
-  clients,
-  currentClient: newClient,
+
+const initialState: TeamState = {
+  players,
+  currentPlayer: unknown,
 };
 ```
 
-## Challenges
-
-1. Create an **object** that represents a client **project**
-2. Add some approproate **properties** to the **project** object
-3. Create an **interface** that represents your **project** model
-4. Create an **array** of **project** objects
-5. Create an **interface** to represent **project state**
-6. Create an **initialState** object that implements a **ProjectsState** interface
-
-## Solutions
-
-```javascript
-interface Project {
-  id: string;
-  title: string;
-  description: string;
-}
-
-interface ProjectsState {
-  projects: Project[];
-  currentProject: Project;
-}
-
-const firstProject: Project = {
-  id: '1',
-  title: 'Project 1',
-  description: 'This is project 1',
-};
-
-const secondProject: Project = {
-  id: '2',
-  title: 'Project 2',
-  description: 'This is project 2',
-};
-
-const emptyProject = {
-    id: null,
-    title: '',
-    description: '',
-  },
-
-const projects: Project[] = [
-  firstProject,
-  secondProject,
-];
-
-const initialState: ProjectsState = {
-  projects,
-  currentProject: emptyProject,
-}
-```
+## Challenges Part One
+1. Pick something interesting to you such as a player, recipe, album, instrument, etc. 
+2. Create an **object** to represent the object of your choice. 
+3. Add three or four **properties** that are relevant to your **object** and assign them **values**.
+4. Create an interface to represent your **object**.
+5. Create an **array** with a few instances of your objects.
+6. Create an **interface** to represent the application state of your object i.e. **TeamsState** or **RecipesState**
+7. Create an **initialState** object that implements your state interface

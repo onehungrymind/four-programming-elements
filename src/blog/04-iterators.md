@@ -10,109 +10,90 @@ date: 2023-01-05
 ---
 
 ```javascript
-for (let i = 0, len = clients.length; i < len; ++i) {
-  console.log(clients[i]);
+for (let i = 0, len = players.length; i < len; ++i) {
+  console.log(players[i]);
 }
 ```
 
 ```javascript
-clients.forEach((client) => console.log(client));
+players.forEach((player) => console.log(player));
 ```
 
 ```javascript
 // Filter
-const inactiveClientId = '1';
-const filteredClients = clients.filter(
-  (client) => client.id !== inactiveClientId
+const releasedPlayerID = '1';
+const activePlayers = players.filter(
+  (player) => player.id !== releasedPlayerID
 );
 // Map
-const poachClients = clients.map(
-  (client) => (client.company = 'MINE! MWAHAHAHAH!')
+const administerSupplements = players.map(
+  (player) => (player.administer(player.supplements);)
 );
 // Reduce
-const totalLTV = clients.reduce((acc, curr) => acc + curr.spend, 0);
+const totalPoints = players.reduce((acc, curr) => acc + curr.points, 0);
 ```
 
 ## In Practice
 
 ```javascript
-const createClient = (state, payload) => {
-  const newClient = Object.assign({}, payload, { id: uuidv4() });
+const createPlayer = (state, payload) => {
+  const newPlayer = Object.assign({}, payload, { id: uuidv4() });
   return {
-    clients: [...state.clients, newClient],
-    currentClient: state.currentClient,
+    players: [...state.players, newPlayer],
+    currentPlayer: state.currentPlayer,
   };
 };
 ```
 
 ```javascript
-const updateClient = (state, payload) => {
+const updatePlayer = (state, payload) => {
   return {
-    clients: state.clients.map((client) => {
-      return client.id === payload.id
-        ? Object.assign({}, client, payload)
-        : client;
+    players: state.players.map((player) => {
+      return player.id === payload.id
+        ? Object.assign({}, player, payload)
+        : player;
     }),
-    currentClient: state.currentClient,
+    currentPlayer: state.currentPlayer,
   };
 };
 ```
 
 ```javascript
-const deleteClient = (state, payload) => {
+const deletePlayer = (state, payload) => {
   return {
-    clients: state.clients.filter((client) => client.id !== payload.id),
-    currentClient: state.currentClient,
+    players: state.players.filter((player) => player.id !== payload.id),
+    currentPlayer: state.currentPlayer,
   };
 };
 ```
 
 ## Challenges
 
-1. Update your reducer methods to properly modify state using immutable operations
-2. Use **array.concat** or **[... ]** for creating a project
-3. Use **array.map** and **Object.assign** to update an existing project
-4. Use **array.filter** to delete an existing project
+1. Update your reducer methods to properly modify the state using immutable operations.
+2. Use **array.concat** or **[... ]** for creating a project. Important! Read the hint for how to handle UUIDs.
+3. Use **array.map** and **Object.assign** to update an existing project.
+4. Use **array.filter** to delete an existing project.
 
-## Solutions
+## Hint!
+
+When you create a new object, a universally unique identifier (UUID) is generally created by the database for it. Since we are not working with a database, we need to simulate that functionality. I have enclosed a sample function you can use to create the UUID for a new object for you to use in your creation method.
 
 ```javascript
-const loadProjects = (state, payload): ProjectsState => {
-  return {
-    projects: payload,
-    currentProject: null,
-  };
-};
+// THIS IS FOR DEMONSTRATION PURPOSES ONLY!
+// YOU DO NOT NEED TO UNDERSTAND HOW IT WORKS
+const generateUUID = () => {
+    let dt = new Date().getTime();
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+        let r = (dt + Math.random()*16)%16 | 0;
+        dt = Math.floor(dt/16);
+        return (c=='x' ? r :(r&0x3|0x8)).toString(16);
+    });
+}
 
-const selectProject = (state, payload): ProjectsState => {
+const createRecipe = (state, payload): RecipesState => {
   return {
-    projects: state.projects,
-    currentProject: payload,
-  };
-};
-
-const createProject = (state, payload): ProjectsState => {
-  return {
-    projects: [...state.projects, payload],
-    currentProject: state.currentProject,
-  };
-};
-
-const updateProject = (state, payload): ProjectsState => {
-  return {
-    projects: state.projects.map((project) => {
-      return project.id === payload.id
-        ? Object.assign({}, project, payload)
-        : project;
-    }),
-    currentProject: state.currentProject,
-  };
-};
-
-const deleteProject = (state, payload): ProjectsState => {
-  return {
-    projects: state.projects.filter((project) => project.id !== payload.id),
-    currentProject: state.currentProject,
+    payload.id = generateUUID();
+    // THE REST OF THE FUNCTION
   };
 };
 ```
